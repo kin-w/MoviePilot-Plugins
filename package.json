@@ -1,0 +1,14 @@
+{
+  "CrossSeedSkipVerify": {
+    "name": "蛙辅·跳校版",
+    "description": "支持NexusPHP站点自动辅种，基于“青蛙辅种助手”修改并新增跳过校验功能。
+    "labels": "做种",
+    "version": "3.0.4",
+    "icon": "qingwa.png",
+    "author": "233@qingwa,路人",
+    "level": 2,
+    "history": {
+      "v3.0.4": "新增跳过校验功能，支持qbittorrent 5跳过校验后自动开始"
+    }
+  }
+}
