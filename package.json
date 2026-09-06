@@ -1,14 +1,15 @@
 {
   "CrossSeedSkipVerify": {
     "name": "蛙辅·跳校版",
-    "description": "支持NexusPHP站点自动辅种，基于“青蛙辅种助手”修改并新增跳过校验功能。
+    "description": "支持NexusPHP站点自动辅种，基于“青蛙辅种助手”修改并新增跳过校验功能。",
     "labels": "做种",
     "version": "3.0.4",
     "icon": "qingwa.png",
     "author": "233@qingwa,路人",
     "level": 2,
+    "v2": true,
     "history": {
-      "v3.0.4": "新增跳过校验功能，支持qbittorrent 5跳过校验后自动开始"
+      "v3.0.4": "首次发布跨版本插件市场版本，规范化插件目录与索引，兼容 MoviePilot V1/V2/V3"
     }
   }
 }
