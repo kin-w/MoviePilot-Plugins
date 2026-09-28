@@ -279,18 +279,18 @@ class CrossSeedSkipVerify(_PluginBase):
             ]
             self._sites = [site_id for site_id, site_name in all_sites if site_id in self._sites]
 
-            # 整理所有可用内部站点信息
+            # 整理所有内部站点信息（包含停用站点，避免用户选中的站点在保存时被静默过滤，
+            # 停用站点在辅种运行时 __seed_torrents 中已有 is_active 检查兜底跳过）
             all_site_cs_info_map: dict[str, CSSiteConfig] = dict()
             for site in inner_site_list:
-                if site.is_active:
-                    all_site_cs_info_map[site.name] = CSSiteConfig(
-                        name=site.name,
-                        url=site.url,
-                        id=site.id,
-                        cookie=site.cookie,
-                        ua=site.ua,
-                        proxy=True if site.proxy else False,
-                    )
+                all_site_cs_info_map[site.name] = CSSiteConfig(
+                    name=site.name,
+                    url=site.url,
+                    id=site.id,
+                    cookie=site.cookie,
+                    ua=site.ua,
+                    proxy=True if site.proxy else False,
+                )
             for site in self.__custom_sites():
                 all_site_cs_info_map[site.get("name")] = CSSiteConfig(
                     name=site.get("name"),
